@@ -10,20 +10,101 @@
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
 		}
         .glowAnime span{opacity: 0;}
 
         /*アニメーションで透過を0から1に変化させtext-shadowをつける*/
-        .glowAnime.glow span{ animation:glow_anime_on 1s ease-out forwards; }
+        .glowAnime.glow span{ animation:glow_anime_on 3s ease-out forwards; }
 
         @keyframes glow_anime_on{
             0% { opacity:0; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
             50% { opacity:1;text-shadow: 0 0 10px #fff,0 0 15px #fff; }
             100% { opacity:1; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
         }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 200px; /* ロゴの幅を調整 */
+        }
+
+        p {
+            word-wrap: break-word; /* テキストが画面幅に収まらない場合に改行する */
+            max-width: 90%; /* 必要に応じて最大幅を設定 */
+            line-height: 20; /* 行間を設定 */
+        }
+
+        .container {
+            max-width: 90%; /* コンテナの最大幅を設定 */
+            margin: 0 auto; /* コンテナを中央に配置 */
+            padding: 20px; /* 必要に応じてパディングを追加 */
+            box-sizing: border-box; /* パディングを含めたボックスサイズを設定 */
+        }
 	</style>
 </head>
 <body>
+    <div class="header">
+        <img src="./img/logo.svg" alt="Logo">
+    </div>
+
+    <div class="container">
+        <p class="glowAnime">たとえ今は会えなくても</p>
+        <p class="glowAnime">聴こえてくる 懐かしい歌</p>
+        <p class="glowAnime">星のカケラ 消える前に</p>
+        <p class="glowAnime">心に響いた</p>
+        <p class="glowAnime">あなたの想いが</p>
+        <p class="glowAnime">空を駆け抜けて</p>
+        <p class="glowAnime">ビジョンをそっと伝えた</p>
+        <p class="glowAnime">大人は知らない ときめきの宇宙</p>
+        <p class="glowAnime">夜がやって来たら</p>
+        <p class="glowAnime">涙はきっと乾くの</p>
+
+        <p class="glowAnime">夢の中に 会いに行けば</p>
+        <p class="glowAnime">聴こえてくる 懐かしい歌</p>
+        <p class="glowAnime">遠く遠く離れてても</p>
+        <p class="glowAnime">ずっと繋がっているよ</p>
+
+        <p class="glowAnime">あなたが傷つき 見失った時は</p>
+        <p class="glowAnime">迎えに行くから 何度でもそう願うよ</p>
+        <p class="glowAnime">夢の中に会いにゆくよ</p>
+        <p class="glowAnime">聴こえてくる 懐かしい歌</p>
+        <p class="glowAnime">ずっとここで待っていたの</p>
+        <p class="glowAnime">窓の外 見つめながら</p>
+
+        <p class="glowAnime">黒く暗く 闇が 青く淡く光る</p>
+        <p class="glowAnime">希望の向こう側で</p>
+        <p class="glowAnime">迷う叫ぶ走る 時間も超えてしまう</p>
+        <p class="glowAnime">迎えに来たよ ぼろぼろだけど</p>
+
+        <p class="glowAnime">私が見えるかな</p>
+        <p class="glowAnime">夢の中で 踊りましょう</p>
+        <p class="glowAnime">そして歌うの 懐かしい歌</p>
+
+        <p class="glowAnime">忘れないでどんな時も そばに・・・</p>
+        <p class="glowAnime">夢の中に あなたがいる</p>
+        <p class="glowAnime">決して消えない懐かしい歌</p>
+        <p class="glowAnime">目と目合わせた涙の中</p>
+        <p class="glowAnime">影が風に溶けてゆく</p>
+
+        <p class="glowAnime">失くしたけど 輝き出す</p>
+        <p class="glowAnime">不思議な2人の ストーリー</p>
+
+    </div> 
+    
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
 		// glowAnimeにglowというクラス名を付ける定義
@@ -72,7 +153,5 @@
             GlowAnimeControl();/* アニメーション用の関数を呼ぶ*/
         });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 	</script>
-
-    <p class="glowAnime">テキストがほのかに光りながら出現します</p>
 </body>
 </html>
